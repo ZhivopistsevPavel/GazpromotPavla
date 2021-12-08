@@ -1,0 +1,44 @@
+.news-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    height: 500px;
+    margin-bottom: 50px;    
+
+    [class ^="box-"] {
+        display: flex;
+        @extend %box-shadow;
+        align-items: flex-end;
+    }  
+
+    .box-1 {
+        background-image: url(/img/auto.jpg);
+        background-color:rgb(253, 201, 104);
+        background-size: cover;
+    }
+
+    .box-2 {       
+        height: 50%;
+        background-color: rgb(104, 252, 252);
+    }
+
+    .box-3 {
+        background-color: rgb(206, 122, 248);
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    p {
+        padding: 24px;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+    }
+}

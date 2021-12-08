@@ -1,0 +1,54 @@
+$primary: #0078D2;
+$secondary: rgb(231, 231, 231);
+
+
+
+
+// @extend
+
+%box-shadow {
+    box-shadow: 1px 1px 1px 1px $secondary;
+    border-radius: 10px;
+}
+
+%inline-type {
+    display: flex;
+    justify-content: space-between;
+}
+
+%photo--style {
+    height: 40px;
+    border-radius: 100%;
+}
+
+@mixin sexy-medal($width : 100px, $medal-color: gold) {
+    width: $width;
+    height: $width;
+    margin-top: $width*0.25;
+    margin-bottom:$width*0.20;
+    position: relative;
+    border-radius: 50%;
+    background-color: $primary;
+    background-size: cover;
+    background-position: center;
+
+    .medal {
+        $width: $width*0.25;
+
+        box-sizing: content-box;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: $width*0.5;
+        text-align: center;
+        line-height: $width;
+
+        width: $width;
+        height: $width;
+        background-color: $medal-color;
+        border-radius: 50%;
+        border: 2px solid white;
+
+    }
+}
