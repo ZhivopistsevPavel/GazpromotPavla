@@ -7,6 +7,10 @@ body {
     background-color: rgb(245, 245, 245);
 }
 
+a {
+    text-decoration: none;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -53,7 +57,7 @@ h3 {
 
     .cm-photo {
         @extend %photo--style;
-        border: 3px solid white;
+        border: 3px solid $light;
 
         &.second {
             position: absolute;
@@ -61,6 +65,7 @@ h3 {
         }
     }
 }
+
 
 
 .between {
@@ -82,7 +87,9 @@ h3 {
     border-radius: 5px;
 
     .widget {
-        background-color: white;
+        display: flex;
+        flex-direction: column;
+        background-color: $light;
         padding: 15px;
         @extend %box-shadow;
 
@@ -94,11 +101,16 @@ h3 {
             font-weight: 600;
 
         }
+
+        .block-bottom {
+            margin-top: auto;
+        }
     }
 
     .gray-elemets {
         text-decoration: none;
         display: inline-flex;
+        flex-wrap: wrap;
 
         a {
             text-decoration: none;
@@ -148,8 +160,8 @@ h3 {
     margin: 0 auto;
     list-style: none;
 
-    .layout-icon {
-        width: 25px;
-        height: 15px;
+    a {
+        color: black;
+        padding: 0 7px;
     }
 }

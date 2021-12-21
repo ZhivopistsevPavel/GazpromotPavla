@@ -1,6 +1,9 @@
 $primary: #0078D2;
 $secondary: rgb(231, 231, 231);
+$light: white;
 
+$fw: 700;
+$fs: 45px;
 
 
 
@@ -20,6 +23,7 @@ $secondary: rgb(231, 231, 231);
     height: 40px;
     border-radius: 100%;
 }
+
 
 @mixin sexy-medal($width : 100px, $medal-color: gold) {
     width: $width;
@@ -48,7 +52,8 @@ $secondary: rgb(231, 231, 231);
         height: $width;
         background-color: $medal-color;
         border-radius: 50%;
-        border: 2px solid white;
+        border: 2px solid $light;
 
     }
 }
+

@@ -1,29 +1,60 @@
 .news-box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    height: 500px;
+    gap: 10px;
     margin-bottom: 50px;    
 
     [class ^="box-"] {
         display: flex;
-        @extend %box-shadow;
         align-items: flex-end;
+        min-height: 500px;
+
+        .news-menu {
+            display: flex;
+            width: 300px;
+            
+            .news-item {
+                display: flex;
+                align-items: center;
+            }
+
+            .news-link {
+                color: black;
+            }
+        }
     }  
 
     .box-1 {
         background-image: url(/img/auto.jpg);
         background-color:rgb(253, 201, 104);
         background-size: cover;
+        @extend %box-shadow;
     }
 
-    .box-2 {       
-        height: 50%;
-        background-color: rgb(104, 252, 252);
+    .box-2 {      
+        display: flex;
+        flex-direction: column;
+
+        .news-img {
+            width: 100%;
+            height: 50%;
+            background-image: url(/img/pic1.jpg);
+            background-size: cover;
+            @extend %box-shadow;
+        }
+
+        .content {
+            
+            p {
+                color: black;
+            }
+        }   
+        
     }
 
     .box-3 {
         background-color: rgb(206, 122, 248);
+        @extend %box-shadow;
     }
 
     ul {
@@ -39,6 +70,14 @@
         padding: 24px;
         font-size: 20px;
         font-weight: bold;
-        color: white;
+        color: $light;
+    }
+}
+
+
+@media  screen and (max-width:974px) {
+    .news-box {
+        display: flex;
+        flex-direction: column;
     }
 }
