@@ -3,7 +3,8 @@ $secondary: rgb(231, 231, 231);
 $light: white;
 
 $fw: 700;
-$fs: 45px;
+$fs: 38px;
+
 
 
 
@@ -12,6 +13,7 @@ $fs: 45px;
 %box-shadow {
     box-shadow: 1px 1px 1px 1px $secondary;
     border-radius: 10px;
+    
 }
 
 %inline-type {
